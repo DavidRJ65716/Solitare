@@ -20,7 +20,7 @@ public class Deck {
 	}
 	
 	public Card drawCard() {
-		return this.deck.get( 0 );
+		return this.deck.isEmpty() ? null : this.deck.get( 0 );
 	}
 	
 	public void shuffleDeck() {
