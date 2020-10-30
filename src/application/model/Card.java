@@ -1,5 +1,8 @@
 package application.model;
 
+/*
+ * Card class, container for data
+ */
 public class Card {
 	private String suit;
 	private String rank;

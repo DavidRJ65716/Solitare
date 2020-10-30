@@ -1,11 +1,21 @@
 package application.model;
 
+/*
+ * Keeps track of card locations and movement
+ */
 public class Board {
+	
+	/* Card object arrays for keeping track of placement */
 	Card[][] board = new Card[8][26];
 	Card[][] homecell = new Card[4][13];
 	Card[] freecell = new Card[4];
+	
+	/* Int arrays to keep track of bottom of each "stack" */
 	int[] boardHeight = new int[8];
 	
+	/*
+	 * Board constructor, creates deck and places cards on board
+	 */
 	public Board() {
 		Deck deck = new Deck();
 		
@@ -15,6 +25,7 @@ public class Board {
 			for( int j = 0; j < 7; j++ ) {
 				if( i > 3 && j == 6 ) {
 					boardHeight[i] = 6;
+					
 					continue;
 				}
 				
