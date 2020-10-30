@@ -10,8 +10,7 @@ public class Deck {
 	
 	public Deck() {
 		this.deck.clear();
-		for( int suit = 0; suit < this.suits.length; suit++ )
-		{
+		for( int suit = 0; suit < this.suits.length; suit++ ) {
 			for( int rank = 0; rank < this.ranks.length; rank++ ) {
 				Card newCard = new Card( this.suits[suit], this.ranks[rank] );
 				this.deck.add( newCard );
@@ -20,7 +19,7 @@ public class Deck {
 	}
 	
 	public Card drawCard() {
-		return this.deck.isEmpty() ? null : this.deck.get( 0 );
+		return this.deck.isEmpty() ? null : this.deck.remove( 0 );
 	}
 	
 	public void shuffleDeck() {
