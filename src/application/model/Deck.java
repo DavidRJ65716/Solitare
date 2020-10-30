@@ -16,13 +16,15 @@ public class Deck {
 				this.deck.add( newCard );
 			}
 		}
+		
+		this.shuffleDeck();
 	}
 	
 	public Card drawCard() {
 		return this.deck.isEmpty() ? null : this.deck.remove( 0 );
 	}
 	
-	public void shuffleDeck() {
+	private void shuffleDeck() {
 		Random rand = new Random();
 		for( int index = 0; index < this.deck.size(); index++ ) {
 			int randIndex = rand.nextInt( index + 1 );
